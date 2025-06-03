@@ -49,7 +49,7 @@
                 <button id="close-menu" class="text-4xl">&times;</button>
             </div>
             <div
-                class="flex flex-col space-y-4 p-1 m-0 h-full overflow-y-auto md:grid md:grid-cols-3 lg:grid-cols-3 gap-1 w-full"
+                class="flex flex-col gap-y-4 p-4 m-0 h-full overflow-y-auto md:grid md:grid-cols-3 lg:grid-cols-3 gap-1 w-full"
                 style="padding-right: 1rem;"
             >
                 <a
@@ -370,33 +370,6 @@
       });
   }
 
-  // Guardar dibujo en la API
-  function saveDraw() {
-    const canvas = document.getElementById('drawing-canvas');
-    // Asegúrate de definir csrfToken en tu JS si tu backend lo requiere
-    canvas.toBlob((blob) => {
-      const formData = new FormData();
-      formData.append('draw[image]', blob, 'draw.png');
-
-      fetch('https://centro.juanfuent.es/api/draws', {
-        method: 'POST',
-        headers: {
-          'X-CSRF-Token': csrfToken // Define csrfToken si es necesario
-        },
-        body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
-        loadDrawings(); // Recargar galería
-        clearCanvas();  // Limpia el canvas después de guardar
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('Error al guardar el dibujo');
-      });
-    }, 'image/jpeg', 0.9);
-  }
 
   // Llama a loadDrawings al cargar la página
   document.addEventListener('DOMContentLoaded', loadDrawings);

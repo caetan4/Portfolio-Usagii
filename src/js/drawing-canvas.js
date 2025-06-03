@@ -122,6 +122,28 @@ function initDrawingCanvas() {
         return { x, y };
     }
 
+    
+
+// Guardar dibujo en la API
+function saveDraw() {
+    canvas.toBlob((blob) => {
+    const formData = new FormData();
+    formData.append('draw[image]', blob, 'draw.png');
+
+    fetch('https://centro.juanfuent.es/api/draws', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+    }, 'image/jpeg', 0.9);
+}
+
     // Event listeners para mouse
     canvas.addEventListener('mousedown', startDrawing);
     canvas.addEventListener('mousemove', draw);
@@ -242,6 +264,7 @@ function initDrawingCanvas() {
                     saveButton.classList.remove('bg-green-600', 'ring-2', 'ring-white');
                     saveButton.classList.add('bg-indigo-700');
                 }, 1000);
+                saveDraw()
             } catch (e) {
                 console.error('Error al guardar el dibujo:', e);
                 alert('No se pudo guardar el dibujo. Intenta de nuevo.');
