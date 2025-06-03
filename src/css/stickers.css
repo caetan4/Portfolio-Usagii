@@ -1,0 +1,71 @@
+/* Estilos para stickers interactivos */
+.sticker-3d, .sticker-item {
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    touch-action: manipulation;
+    transition: transform 0.2s ease;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.sticker-3d:hover, .sticker-item:hover {
+    z-index: 15 !important; /* Aumentado pero aún por debajo de los botones de navegación */
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+/* Eliminar bordes blancos de las imágenes de stickers */
+.sticker-item img, .sticker-3d img {
+    object-fit: contain !important;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+
+/* Estilos específicos para el header */
+header {
+    background-color: #1017e8 !important;
+}
+
+/* Contenedor de stickers */
+.stickers-container {
+    background-color: transparent !important;
+    overflow: hidden !important;
+}
+
+body.dragging-sticker {
+    cursor: grabbing !important;
+}
+
+body.dragging-sticker * {
+    cursor: grabbing !important;
+}
+
+/* Prevenir selección de texto durante el arrastre */
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Estilos para el header */
+header {
+    overflow: hidden;
+    position: relative;
+    touch-action: manipulation;
+}
+
+/* Estilos para el contenedor de stickers */
+.stickers-3d-container {
+    touch-action: manipulation;
+}
