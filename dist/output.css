@@ -17,10 +17,10 @@ html {
 body {
   margin: 0;
   line-height: inherit;
-  background-color: transparent;
+  background-color: #f9fafb;
   color: #1f2937;
 }
-
+ 
 /* Container */
 .container {
   width: 100%;
