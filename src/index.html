@@ -177,7 +177,7 @@
 
             <!-- Canvas de dibujo interactivo -->
             <section class="flex-grow flex items-center justify-center p-4" style="background-color: #ede9cc;">
-                <div class="bg-indigo-800 rounded-xl overflow-hidden p-3 w-full max-w-2xl flex flex-col gap-2">
+                <div class="bg-blue-900 rounded-xl overflow-hidden p-3 w-full max-w-2xl flex flex-col gap-2">
                     <!-- Contenedor del canvas (más rectangular) -->
                     <div class="relative bg-white rounded-lg overflow-hidden flex-grow" style="min-height: 250px; height: 300px;">
                         <!-- Canvas de dibujo -->
@@ -334,6 +334,12 @@
             <!-- Agregar controles del carrusel aquí -->
             <div id="drawing-carousel-controls" class="flex justify-center items-center space-x-4 mt-2"></div>
         </section>
+
+        <!-- Galería de dibujos del pizarrón comunitario -->
+        <section class="py-4" style="background-color: #ede9cc;">
+          <h3 class="text-xl font-bold text-center mb-4">Pizarrón de la comunidad</h3>
+          <div id="drawingsGallery" class="grid grid-cols-2 md:grid-cols-4 gap-4 px-4"></div>
+        </section>
     </main>
 
     <!-- Scripts -->
@@ -342,5 +348,61 @@
     <script src="js/drawing-carousel.js" type="module"></script>
     <script src="js/header-stickers-simple.js"></script>
     <script src="js/menu.js"></script>
+    <script>
+  // Cargar dibujos desde la API
+  function loadDrawings() {
+    fetch('https://centro.juanfuent.es/api/draws')
+      .then(response => response.json())
+      .then(draws => {
+        const gallery = document.getElementById('drawingsGallery');
+        gallery.innerHTML = ''; // Limpiar dibujos existentes
+
+        draws.forEach(draw => {
+          const drawingElement = document.createElement('div');
+          drawingElement.className = "bg-white rounded-lg shadow p-2 flex items-center justify-center";
+          drawingElement.innerHTML = `<img src="${draw.image_url}" alt="Drawing ${draw.id}" class="w-full h-auto rounded">`;
+          gallery.appendChild(drawingElement);
+        });
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Error al cargar los dibujos');
+      });
+  }
+
+  // Guardar dibujo en la API
+  function saveDraw() {
+    const canvas = document.getElementById('drawing-canvas');
+    // Asegúrate de definir csrfToken en tu JS si tu backend lo requiere
+    canvas.toBlob((blob) => {
+      const formData = new FormData();
+      formData.append('draw[image]', blob, 'draw.png');
+
+      fetch('https://centro.juanfuent.es/api/draws', {
+        method: 'POST',
+        headers: {
+          'X-CSRF-Token': csrfToken // Define csrfToken si es necesario
+        },
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        loadDrawings(); // Recargar galería
+        clearCanvas();  // Limpia el canvas después de guardar
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Error al guardar el dibujo');
+      });
+    }, 'image/jpeg', 0.9);
+  }
+
+  // Llama a loadDrawings al cargar la página
+  document.addEventListener('DOMContentLoaded', loadDrawings);
+
+  // Conecta el botón de guardar con saveDraw
+  document.getElementById('save-canvas').addEventListener('click', saveDraw);
+</script>
 </body>
 </html>
