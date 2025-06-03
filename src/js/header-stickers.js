@@ -407,7 +407,7 @@ const STICKERS = [
     '../assets/stickers/IMG_0372.png',
     '../assets/stickers/IMG_0373.png',
     '../assets/stickers/IMG_0377.png',
-    '../assets/stickers/IMG_0381.png',
+    
     '../assets/stickers/IMG_0385.png'
 ];
 

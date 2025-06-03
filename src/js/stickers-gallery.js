@@ -128,7 +128,7 @@ async function getAllAvailableStickers() {
         { path: `${basePath}IMG_0372.png`, name: 'Sticker 2' },
         { path: `${basePath}IMG_0373.png`, name: 'Sticker 3' },
         { path: `${basePath}IMG_0377.png`, name: 'Sticker 4' },
-        { path: `${basePath}IMG_0381.png`, name: 'Sticker 5' },
+        
         { path: `${basePath}IMG_0385.png`, name: 'Sticker 6' }
     ];
 

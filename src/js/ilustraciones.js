@@ -50,17 +50,17 @@ function loadIlustracionesFromFolder(grid) {
 
     // Volver a las rutas relativas pero asegurarnos de que sean correctas
     const ilustracionesPaths = [
-        '../assets/ilustraciones/IMG_0388.png',
-        '../assets/ilustraciones/IMG_0389.png',
-        '../assets/ilustraciones/IMG_0390.png',
-        '../assets/ilustraciones/IMG_0391.png',
-        '../assets/ilustraciones/IMG_0392.png',
-        '../assets/ilustraciones/IMG_0393.png',
-        '../assets/ilustraciones/IMG_0396.png',
-        '../assets/ilustraciones/IMG_0397.png',
-        '../assets/ilustraciones/IMG_0400.png',
-        '../assets/ilustraciones/IMG_0401.png',
-        '../assets/ilustraciones/IMG_0403.png'
+        '../assets/ilustraciones/IMG_0388.jpg',
+        '../assets/ilustraciones/IMG_0389.jpg',
+        '../assets/ilustraciones/IMG_0390.jpg',
+        '../assets/ilustraciones/IMG_0391.jpg',
+        '../assets/ilustraciones/IMG_0392.jpg',
+        '../assets/ilustraciones/IMG_0393.jpg',
+        '../assets/ilustraciones/IMG_0396.jpg',
+        '../assets/ilustraciones/IMG_0397.jpg',
+        '../assets/ilustraciones/IMG_0400.jpg',
+        '../assets/ilustraciones/IMG_0401.jpg',
+        '../assets/ilustraciones/IMG_0403.jpg'
     ];
 
     // Verificar si las imágenes existen
