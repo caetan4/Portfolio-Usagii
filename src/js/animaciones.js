@@ -44,7 +44,8 @@ function loadAnimacionesFromFolder(grid) {
         `${baseUrl}/assets/gifs/autorretrato_Caetana.gif`,
         `${baseUrl}/assets/gifs/camaras_Caetana.gif`,
         `${baseUrl}/assets/gifs/mascaras_Caetana.gif`,
-        `${baseUrl}/assets/gifs/pendulo_Caetana.gif`
+        `${baseUrl}/assets/gifs/pendulo_Caetana.gif`,
+        
     ];
 
     console.log('Rutas de animaciones:', animacionesPaths);
