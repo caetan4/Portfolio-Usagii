@@ -41,11 +41,11 @@ function loadAnimacionesFromFolder(grid) {
     console.log('URL base:', baseUrl);
 
     const animacionesPaths = [
-        `${baseUrl}/assets/gifs/proyectofinal_Caetana.gif`,
-        `${baseUrl}/assets/gifs/autorretrato_Caetana.gif`,
-        `${baseUrl}/assets/gifs/pendulo_Caetana.gif`,
-        `${baseUrl}/assets/gifs/mascaras_Caetana.gif`,
-        `${baseUrl}/assets/gifs/camaras_Caetana.gif`,
+        `/assets/gifs/proyectofinal_Caetana.gif`,
+        `/assets/gifs/autorretrato_Caetana.gif`,
+        `/assets/gifs/pendulo_Caetana.gif`,
+        `/assets/gifs/mascaras_Caetana.gif`,
+        `/assets/gifs/camaras_Caetana.gif`,
      
        
        
