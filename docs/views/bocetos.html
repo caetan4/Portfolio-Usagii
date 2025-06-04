@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bocetos - Portfolio Usagii</title>
+  <meta name="description" content="Galería de bocetos y sketches">
+  <link rel="icon" href="../assets/pixels.svg" type="image/svg+xml">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/stickers.css" rel="stylesheet">
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-['Poppins'] text-gray-900" style="background-color:#ede9cc;">
+  <header class="relative overflow-hidden" style="background-color:#1017e8; height:120px;">
+    <!-- stickers 3D -->
+    <!-- Menú hamburguesa móvil -->
+    <div class="absolute top-4 right-4 z-30">
+      <button id="menu-button" class="flex flex-col items-center space-y-1.5 p-2 rounded-full shadow-md bg-[#ede9cc] hover:scale-110 transition" aria-label="Menú">
+        <span class="block w-6 h-0.5 bg-red-600"></span>
+        <span class="block w-6 h-0.5 bg-red-600"></span>
+        <span class="block w-6 h-0.5 bg-red-600"></span>
+      </button>
+    </div>
+    <!-- Sheet móvil -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 overflow-y-auto transform translate-x-full transition-transform duration-300">
+      <div class="flex justify-between items-center p-4">
+        <div>
+          <h2 class="text-xl font-semibold">Menu</h2>
+          <p class="text-sm text-gray-700 mt-1"></p>
+        </div>
+        <button id="close-menu" class="text-4xl">&times;</button>
+      </div>
+      <div class="flex flex-col gap-y-4 p-4 m-0 h-full overflow-y-auto md:grid md:grid-cols-3 lg:grid-cols-3 gap-1 w-full">
+        <!-- Inicio -->
+        <a href="../index.html" class="relative block overflow-hidden rounded-lg shadow group w-full h-60 md:aspect-[3/2]">
+          <div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition" style="background-image:url('../assets/images/usa.svg')"></div>
+          <div class="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-20 group-hover:bg-opacity-30 transition">
+            <span class="text-blue-800 text-lg font-medium"></span>
+          </div>
+        </a>
+        <!-- Stickers -->
+        <a href="stickers.html" class="relative block overflow-hidden rounded-lg shadow group w-full h-60 md:aspect-[3/2]">
+          <div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition" style="background-image:url('../assets/gifs/gifstikers.gif')"></div>
+          <div class="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-20 group-hover:bg-opacity-30 transition">
+            <span class="text-blue-600 text-lg font-bungee">Stickers / Prints</span>
+          </div>
+        </a>
+        <!-- Ilustraciones -->
+        <a href="ilustraciones.html" class="relative block overflow-hidden rounded-lg shadow group w-full h-60 md:aspect-[3/2]">
+          <div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition" style="background-image:url('../assets/ilustraciones/IMG_0393.jpg')"></div>
+          <div class="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-20 group-hover:bg-opacity-30 transition">
+            <span class="text-blue-600 text-lg font-bungee">Ilustraciones</span>
+          </div>
+        </a>
+        <!-- Animaciones -->
+        <a href="animaciones.html" class="relative block overflow-hidden rounded-lg shadow group w-full h-60 md:aspect-[3/2]">
+          <div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition" style="background-image:url('../assets/gifs/pendulo_Caetana.gif')"></div>
+          <div class="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-20 group-hover:bg-opacity-30 transition">
+            <span class="text-blue-600 text-lg font-bungee">Animaciones</span>
+          </div>
+        </a>
+        <!-- Bocetos -->
+        <a href="bocetos.html" class="relative block overflow-hidden rounded-lg shadow group w-full h-60 md:aspect-[3/2]">
+          <div class="absolute inset-0 bg-cover bg-center transform group-hover:scale-110 transition" style="background-image:url('../assets/bocetos/6B185504-22B3-4A9B-9177-810E7E95D245.jpg')"></div>
+          <div class="absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-20 group-hover:bg-opacity-30 transition">
+            <span class="text-blue-600 text-lg font-bungee">Bocetos</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main class="min-h-screen bg-[#ede9cc]">
+    <section class="py-8" id="bocetos-section">
+      <h2 class="text-2xl font-bold text-blue-600 font-bungee mb-6 text-center">BOCETOS</h2>
+      <div class="max-w-6xl mx-auto px-4 mt-8">
+        <div class="bocetos-grid" id="bocetos-grid">
+          <div class="loader-center text-gray-500 animate-pulse" id="loading-message">Cargando bocetos...</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../js/grid-algorithm.js"></script>
+  <script src="../js/bocetos.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/header-stickers-simple.js"></script>
+</body>
+</html>
