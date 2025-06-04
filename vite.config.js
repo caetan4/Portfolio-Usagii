@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: '/Portfolio-Usagii/',
   root: 'src',
   build: {
     outDir: '../dist',
