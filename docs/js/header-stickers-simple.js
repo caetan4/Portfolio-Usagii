@@ -83,12 +83,11 @@ function initStickers() {
 
     // Lista de stickers a usar
     const stickerPaths = [
-        '../assets/stickers/IMG_0371.png',
-        '../assets/stickers/IMG_0372.png',
-        '../assets/stickers/IMG_0373.png',
-        '../assets/stickers/IMG_0377.png',
-        
-        '../assets/stickers/IMG_0385.png'
+        '/assets/stickers/IMG_0371.png',
+        '/assets/stickers/IMG_0372.png',
+        '/assets/stickers/IMG_0373.png',
+        '/assets/stickers/IMG_0377.png',
+        '/assets/stickers/IMG_0385.png'
     ];
 
     // Configuración para 2 filas y 3 columnas
