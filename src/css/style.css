@@ -22,7 +22,7 @@
 
 /* Variables personalizadas */
 :root {
-  --primary-color: #6366f1;
+  --primary-color: #3b3eee;
   --secondary-color: #f472b6;
   --accent-color: #10b981;
   --background-color: #f9fafb;
@@ -45,4 +45,15 @@
 
 .menu-card:hover::before {
   opacity: 1;
+}
+
+.btn-board {
+  background-color: #1d4ed8;
+  color: #fff;
+  border: none;
+  transition: background 0.2s;
+}
+
+.btn-board:hover {
+  background-color: #1e40af;
 }
