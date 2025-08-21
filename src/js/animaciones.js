@@ -46,6 +46,7 @@ function loadAnimacionesFromFolder(grid) {
         `${baseUrl}/assets/gifs/pendulo_Caetana.gif`,
         `${baseUrl}/assets/gifs/mascaras_Caetana.gif`,
         `${baseUrl}/assets/gifs/camaras_Caetana.gif`,
+        `${baseUrl}/assets/gifs/finalconceptos_Caetana.gif`,
      
        
        

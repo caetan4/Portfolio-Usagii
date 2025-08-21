@@ -46,6 +46,8 @@ function loadAnimacionesFromFolder(grid) {
         `/Portfolio-Usagii/assets/gifs/pendulo_Caetana.gif`,
         `/Portfolio-Usagii/assets/gifs/mascaras_Caetana.gif`,
         `/Portfolio-Usagii/assets/gifs/camaras_Caetana.gif`,
+        `/Portfolio-Usagii/assets/gifs/finalconceptos_Caetana.gif`,
+        
      
        
        
